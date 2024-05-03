@@ -1,0 +1,628 @@
+body{
+    background-color: #FFFAFA;
+    margin: 0%;
+}
+
+/* INTRO */
+
+#video-intro{
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index:1;
+    cursor: pointer;
+  }
+
+/* TRAILER */
+
+#sidenav-trailer{
+    height: 100%; 
+    width: 100%;
+    position: fixed;
+    background-color: #194176;
+    transition: 5s;
+}
+
+#video-trailer{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 5.5%;
+    left: 5%;
+    animation: fadeIn 5s;
+
+}
+
+#close{
+    height: 3%;
+    width: auto;
+    float: right;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+    animation: fadeIn 8s;
+}
+
+/* HOMEPAGE */
+
+#barra-header{
+    height: 120px;
+    width: 100%;
+    background-color: #194176;
+}
+
+#logo-farol{
+    height: 100px;
+    width: auto;
+    position: relative;
+    left: 1%;
+    cursor: pointer;
+ padding: 16px;
+}
+
+#menubarras{
+    height: 30%;
+    position: relative;
+    float: right;
+    top: 35%;
+    right: 2%;
+    cursor: pointer;
+}
+
+
+#menu-1{
+    position: absolute;
+    top: 9%;
+    background-color: #194176;
+    height: 97%;
+    width: 13.5%;
+    right: 0%;
+    color: white;
+    font-size: 14px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align:justify;
+    letter-spacing: 1px;
+    line-height:1.5;
+}
+
+
+#menu-sobre{
+    cursor: pointer;
+}
+
+#menu-creditos{
+    cursor: pointer;
+}
+
+#menu-sobre:hover{
+    text-decoration: underline;
+}
+
+#menu-sobre:focus{
+    text-decoration: underline;
+}
+
+#menu-creditos:hover{
+    text-decoration: underline;
+}
+
+
+#menu-2{
+    position: absolute;
+    top: 1%;
+    background-color: #194176;
+    height: 99%;
+    width: 149%;
+    right: 100%;
+
+}
+
+#menu-sobre2{
+    color: white;
+    font-size: 14px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    padding: 5%;
+}
+
+#menu-creditos2{
+    color: white;
+    font-size: 14px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    padding: 5%;
+}
+
+
+/* slide */
+
+#fotos-slide{
+    flex-direction: row;
+    display: flex;
+}
+
+
+#container-slide {
+    background-image: url(img/foto-1.jpg.png);
+    transform: scaleX(-1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ffffff;
+    width: 25%;
+    height: 592px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 1s;
+    float: left;
+    cursor: pointer;
+}
+
+#container-slide:hover {
+    width: 40%;
+}
+
+#container-slide2 {
+    background-image: url(img/foto-2.jpg.png);
+    transform: scaleX(-1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ffffff;
+    width: 25%;
+    height: 592px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 1s;
+    float: left;
+    cursor: pointer;
+}
+
+#container-slide2:hover {
+    width: 40%;
+}
+
+#container-slide3 {
+    background-image: url(img/foto-3.jpg.png);
+    transform: scaleX(-1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ffffff;
+    width: 25%;
+    height: 592px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 1s;
+    float: left;
+    cursor: pointer;
+}
+
+#container-slide3:hover {
+    width: 40%;
+}
+
+#container-slide4 {
+    background-image: url(img/foto-4.jpg.png);
+    transform: scaleX(-1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ffffff;
+    width: 25%;
+    height: 592px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 1s;
+    float: left;
+    cursor: pointer;
+}
+
+#container-slide4:hover {
+    width: 40%;
+}
+
+/* BIO PESSOA */
+
+#div-bio{
+    background-color: #ffffff;
+    width: 100%;
+}
+
+/*icons bio */
+
+#img-pessoa{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation: fadeIn 3s;
+}
+
+#play-icon{
+    height: 7%;
+    position: absolute;
+    bottom: 12.5%;
+    left: 22%;
+    cursor: pointer;
+    animation: fadeIn 5s;
+}
+
+#home-icon{    
+    height: 7%;
+    position: absolute;
+    bottom: 12.5%;
+    left: 15%;
+    cursor: pointer;
+    animation: fadeIn 5s;
+}
+
+#seta-icon{
+    height: 7%;
+    position: absolute;
+    bottom: 12.5%;
+    left: 28%;
+    cursor: pointer;
+    animation: fadeIn 5s;
+}
+
+#pessoabio{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    animation: fadeIn 3s;
+}
+
+/* VIDEO */
+
+#nav-vid{
+    width: 100%;
+    height: 520px;
+}
+
+
+#vid-pessoa{
+    position: relative;
+    top: 7.5%;
+    left: 10.5%;
+    animation: fadeIn 3s;
+    height: 350px;
+    width: 650px;
+}
+
+#moldura{
+    position: relative;
+    height: 80%;
+    width: 55%;
+    background-color: #194176;
+    left: 23%;
+    top: 10.5%;
+    animation: fadeIn 3s;
+}
+
+#seguinte-2{
+    height: 10%;
+    position: relative;
+    left: 80%;
+    cursor:pointer;
+    transition: transform .3s;
+    animation: fadeIn 8s;
+}
+
+#seguinte-2:hover{
+    transform: scale(1.2);
+}
+
+#anterior-2{
+    height: 10%;
+    position: relative;
+    left: 13%;
+    cursor:pointer;
+    transition: transform .3s;
+    animation: fadeIn 8s;
+}
+
+#anterior-2:hover{
+    transform: scale(1.2);
+}
+
+/* LUGAR */
+
+#div-bio2{
+    background-color: white;
+    width: 100%;
+}
+
+#img-lugar{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation: fadeIn 3s;
+}
+
+#play-icon2{
+    height: 7%;
+    position: absolute;
+    bottom: 12.5%;
+    left: 22%;
+    cursor: pointer;
+    animation: fadeIn 5s;
+}
+
+#home-icon2{    
+    height: 7%;
+    position: absolute;
+    bottom: 12.5%;
+    left: 15%;
+    cursor: pointer;
+    animation: fadeIn 5s;
+}
+
+#seta-icon2{
+    height: 7%;
+    position: absolute;
+    bottom: 12.5%;
+    left: 28%;
+    cursor: pointer;
+    animation: fadeIn 5s;
+}
+
+/* VIDEO 2*/
+
+#nav-vid2{
+    width: 100%;
+    height: 520px;
+}
+
+#vid-lugar{
+    position: relative;
+    top: 7.5%;
+    left: 10.5%;
+    animation: fadeIn 3s;
+    height: 350px;
+    width: 650px;
+}
+
+#moldura2{
+    position: relative;
+    height: 80%;
+    width: 55%;
+    background-color: #194176;
+    left: 23%;
+    top: 10.5%;
+    animation: fadeIn 3s;
+}
+
+#seguinte-3{
+    height: 10%;
+    position: relative;
+    left: 80%;
+    cursor:pointer;
+    transition: transform .3s;
+    animation: fadeIn 8s;
+}
+
+#seguinte-3:hover{
+    transform: scale(1.2);
+}
+
+#anterior-3{
+    height: 10%;
+    position: relative;
+    left: 13%;
+    cursor:pointer;
+    transition: transform .3s;
+    animation: fadeIn 8s;
+}
+
+#anterior-3:hover{
+    transform: scale(1.2);
+}
+
+/* SENTIMENTO */
+
+#div-bio3{
+    background-color: #ffffff;
+    width: 100%;
+    
+}
+
+#img-sentimento{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation: fadeIn 3s;
+}
+
+#play-icon3{
+    height: 7%;
+    position: absolute;
+    bottom: 12.5%;
+    left: 22%;
+    cursor: pointer;
+    animation: fadeIn 5s;
+    }
+
+#home-icon3{    
+    height: 7%;
+    position: absolute;
+    bottom: 12.5%;
+    left: 15%;
+    cursor: pointer;
+    animation: fadeIn 5s;
+}
+
+#seta-icon3{
+    height: 7%;
+    position: absolute;
+    bottom: 12.5%;
+    left: 28%;
+    cursor: pointer;
+    animation: fadeIn 5s;
+}
+
+/* VIDEO 3*/
+
+#nav-vid3{
+    width: 100%;
+    height: 520px;
+}
+
+#vid-sentimento{
+    position: relative;
+    top: 7.5%;
+    left: 10.5%;
+    animation: fadeIn 3s;
+    height: 350px;
+    width: 650px;
+}
+
+#moldura3{
+    position: relative;
+    height: 80%;
+    width: 55%;
+    background-color: #194176;
+    left: 23%;
+    top: 10.5%;
+    animation: fadeIn 3s;
+}
+
+#seguinte-5{
+    height: 10%;
+    position: relative;
+    left: 80%;
+    cursor:pointer;
+    transition: transform .3s;
+    animation: fadeIn 8s;
+}
+
+#seguinte-5:hover{
+    transform: scale(1.2);
+}
+
+#anterior-5{
+    height: 10%;
+    position: relative;
+    left: 13%;
+    cursor:pointer;
+    transition: transform .3s;
+    animation: fadeIn 8s;
+}
+
+#anterior-5:hover{
+    transform: scale(1.2);
+}
+
+/* TEMPO */
+
+#div-bio4{
+    background-color: white;
+    width: 100%;
+    
+}
+
+#img-tempo{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation: fadeIn 3s;
+}
+
+#play-icon4{
+    height: 7%;
+    position: absolute;
+    bottom: 12.5%;
+    left: 22%;
+    cursor: pointer;
+    animation: fadeIn 5s;
+    }
+
+#home-icon4{    
+    height: 7%;
+    position: absolute;
+    bottom: 12.5%;
+    left: 15%;
+    cursor: pointer;
+    animation: fadeIn 5s;
+}
+
+#seta-icon4{
+    height: 7%;
+    position: absolute;
+    bottom: 12.5%;
+    left: 28%;
+    cursor: pointer;
+    animation: fadeIn 5s;
+}
+
+/* VIDEO 4*/
+
+#nav-vid4{
+    width: 100%;
+    height: 520px;
+}
+
+#vid-tempo{
+    position: relative;
+    top: 7.5%;
+    left: 10.5%;
+    animation: fadeIn 3s;
+    height: 350px;
+    width: 650px;
+}
+
+#moldura4{
+    position: relative;
+    height: 80%;
+    width: 55%;
+    background-color: #194176;
+    left: 23%;
+    top: 10.5%;
+    animation: fadeIn 3s;
+}
+
+#anterior-6{
+    height: 10%;
+    position: relative;
+    left: 13%;
+    cursor:pointer;
+    transition: transform .3s;
+    animation: fadeIn 8s;
+}
+
+#anterior-6:hover{
+    transform: scale(1.2);
+}
+
+
+
+
+
+/*RODAPE*/
+
+#logo-rodape{
+  width: 100%;
+  margin-top: -100%;
+  margin-bottom: -35px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+

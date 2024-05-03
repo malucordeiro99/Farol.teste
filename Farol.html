@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="img/icon.png"/>
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+        
+        <script language="javascript">
+            var title = document.title;
+            document.title = "Farol";
+        </script>
+    </head>
+      
+    <body>
+        <!--SOM-->
+        <audio id="click">
+            <source src="som/click.mp3"></source>
+        </audio>
+
+        <!--VIDEOS-->
+        <video id="video-intro"  autoplay="autoplay" preload="auto" muted controls >
+            <source src="videos/intro.mp4"  type="video/mp4">
+        </video>
+
+        <iframe id="video-trailer" width="90%" height="90%" src="https://www.youtube.com/embed/bi-dpTusB-w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                
+        <iframe id="vid-pessoa" width="560" height="315" src="https://www.youtube.com/embed/1_DHFiMtjU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <iframe id="vid-lugar" width="560" height="315" src="https://www.youtube.com/embed/l6jB8UvAXRk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+        <iframe id="vid-sentimento" width="560" height="315" src="https://www.youtube.com/embed/egkzfzBVkRI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <iframe id="vid-tempo" width="560" height="315" src="https://www.youtube.com/embed/XJS-IzkXqFg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+        <!--IMAGENS-->
+        
+        <img id="close" src="img/cruz.png">
+
+        <img id="rodape" src="img/rodape.png">
+
+        <script language="javascript" type="text/javascript">
+
+
+// REMOVER VIDEO
+            var videotrailer = document.getElementById("video-trailer");
+            document.body.removeChild(videotrailer);
+            
+          
+            // REMOVER IMAGENS  
+
+            var imgcruz = document.getElementById("close");
+            document.body.removeChild(imgcruz);
+
+            var imgrodape = document.getElementById("rodape");
+            document.body.removeChild(imgrodape);
+     
+        // PRIMEIRA PAGINA E HOMEPAGE
+
+        function abrirtrailer() {
+            document.body.removeChild(paginaintro);
+            paginaintro.removeChild(videointro);
+            document.body.appendChild(sidenavtrailer);
+        }
+
+        abrirTimeout = setTimeout(abrirtrailer, 13500);
+
+        function cancelabrirtrailertimeout() {
+            clearTimeout(abrirTimeout);
+            abrirtrailer();
+        }
+        
+
+        function fechartrailer() {
+            document.body.removeChild(sidenavtrailer);
+            sidenavtrailer.removeChild(videotrailer);
+            sidenavtrailer.removeChild(imgcruz);
+            document.body.appendChild(paginainicial);
+        }
+
+
+        // SLIDE
+
+        function abrirbio (){
+            fotosslide.removeChild(containerslide);
+            fotosslide.removeChild(containerslide2);
+            fotosslide.removeChild(containerslide3);
+            fotosslide.removeChild(containerslide4);
+            paginainicial.removeChild(rodape);
+
+
+            document.body.appendChild(bio);
+            reportWindowSize();
+        
+        }
+
+        function abrirbio2 (){
+            fotosslide.removeChild(containerslide);
+            fotosslide.removeChild(containerslide2);
+            fotosslide.removeChild(containerslide3);
+            fotosslide.removeChild(containerslide4);
+            paginainicial.removeChild(rodape);
+
+            document.body.appendChild(bio2);
+            reportWindowSize();
+        
+        }
+
+        function abrirbio3 (){
+            fotosslide.removeChild(containerslide);
+            fotosslide.removeChild(containerslide2);
+            fotosslide.removeChild(containerslide3);
+            fotosslide.removeChild(containerslide4);
+            paginainicial.removeChild(rodape);
+
+
+            document.body.appendChild(bio3);
+            reportWindowSize();
+        
+        }
+
+        function abrirbio4 (){
+            fotosslide.removeChild(containerslide);
+            fotosslide.removeChild(containerslide2);
+            fotosslide.removeChild(containerslide3);
+            fotosslide.removeChild(containerslide4);
+            paginainicial.removeChild(rodape);
+
+
+            document.body.appendChild(bio4);
+            reportWindowSize();
+        
+        }
+
+        function abrirbio5 (){
+            fotosslide.removeChild(containerslide);
+            fotosslide.removeChild(containerslide2);
+            fotosslide.removeChild(containerslide3);
+            fotosslide.removeChild(containerslide4);
+            paginainicial.removeChild(rodape);
+
+
+            document.body.appendChild(bio5);
+            reportWindowSize();
+        
+        }
+
+       function reportWindowSize() {
+            var bioaltura = window.innerHeight - 65;
+            
+            elems = document.getElementsByClassName("bios");
+            if(elems.length > 0 ) {
+             my_bio = elems[0];
+             my_bio.style.height=String(bioaltura)+'px';
+            }   
+        } 
+        
+        function abrirhomepage(){
+
+            bios = document.getElementsByClassName("bios");
+            if(bios.length > 0 ) {
+             my_bio = bios[0];
+             my_bio.parentElement.removeChild(my_bio);
+            }
+
+            videos = document.getElementsByClassName("videos");
+            if(videos.length > 0 ) {
+             my_video = videos[0];
+             my_video.parentElement.removeChild(my_video);
+            }
+
+            document.getElementById("pagina-inicial");
+            fotosslide.appendChild(containerslide);
+            fotosslide.appendChild(containerslide2);
+            fotosslide.appendChild(containerslide3);
+            fotosslide.appendChild(containerslide4);         
+            paginainicial.appendChild(rodape);
+
+        }
+
+        function abrirmenu1(){         
+        if (document.getElementById("menu-1") == undefined) 
+            {document.body.appendChild(menu1);} 
+            
+        else 
+            {document.body.removeChild(menu1);}
+        }  
+        
+
+        // BOTOES PAGINA INDIVIDUAL
+
+        function avancarvideo(){
+            document.body.removeChild(bio);
+            document.body.appendChild(navvid);
+        }   
+
+        abrirTimeout3 = setTimeout(avancarvideo, 18000);
+
+        function cancelavancarvideotimeout() {
+            clearTimeout(abrirTimeout3);
+            avancarvideo();
+        }
+
+
+        function avancarvideo2(){
+            document.body.removeChild(bio2);
+            document.body.appendChild(navvid2);
+        }  
+        
+        abrirTimeout4 = setTimeout(avancarvideo2, 18000);
+
+        function cancelavancarvideo2timeout() {
+        clearTimeout(abrirTimeout4);
+        avancarvideo2();
+        }
+
+
+        function avancarvideo3(){
+                document.body.removeChild(bio3);
+                document.body.appendChild(navvid3);
+        }   
+
+        abrirTimeout5 = setTimeout(avancarvideo3, 18000);
+
+        function cancelavancarvideo3timeout() {
+        clearTimeout(abrirTimeout5);
+        avancarvideo3();
+        }
+
+
+        function avancarvideo4(){
+                document.body.removeChild(bio4);
+                document.body.appendChild(navvid4);
+        } 
+        
+        abrirTimeout6 = setTimeout(avancarvideo4, 18000);
+
+        function cancelavancarvideo4timeout() {
+        clearTimeout(abrirTimeout6);
+        avancarvideo4();
+        }
+
+
+        function avancarvideo5(){
+            document.body.removeChild(bio5);
+            document.body.appendChild(navvid5);
+        }   
+
+        abrirTimeout7 = setTimeout(avancarvideo5, 18000);
+
+        function cancelavancarvideo5timeout() {
+        clearTimeout(abrirTimeout7);
+        avancarvideo5();
+        }
+
+        // HOME FROM BIO
+
+
+        function abrirhome(){
+            bios = document.getElementsByClassName("bios");
+            if(bios.length > 0 ) {
+             my_bio = bios[0];
+             my_bio.parentElement.removeChild(my_bio);
+            }
+
+            videos = document.getElementsByClassName("videos");
+            if(videos.length > 0 ) {
+             my_video = videos[0];
+             my_video.parentElement.removeChild(my_video);
+            }
+
+            //document.getElementById("pagina-inicial");
+            fotosslide.appendChild(containerslide);
+            fotosslide.appendChild(containerslide2);
+            fotosslide.appendChild(containerslide3);
+            fotosslide.appendChild(containerslide4);          
+            paginainicial.appendChild(rodape);
+        }
+
+        function abrirhomefinal(){
+            bios = document.getElementsByClassName("bios");
+            if(bios.length > 0 ) {
+             my_bio = bios[0];
+             my_bio.parentElement.removeChild(my_bio);
+            }
+
+            videos = document.getElementsByClassName("videos");
+            if(videos.length > 0 ) {
+             my_video = videos[0];
+             my_video.parentElement.removeChild(my_video);
+            }
+
+            //document.getElementById("pagina-inicial");
+            fotosslide.appendChild(containerslide);
+            fotosslide.appendChild(containerslide2);
+            fotosslide.appendChild(containerslide3);
+            fotosslide.appendChild(containerslide4);          
+            paginainicial.appendChild(rodape);
+        }
+
+        function xhover(){
+            home.src = "img/xh.png"
+        }
+
+        function xout(){
+            home.src = "img/x.png"
+        }
+
+        function setahover(){
+            seguinte.src = "img/setah.png"
+        }
+
+        function setaout(){
+            seguinte.src = "img/seta.png"
+        }
+
+        function playhover(){
+            play.src = "img/playh.png"
+        }
+
+        function playout(){
+            play.src = "img/play.png"
+        }
+
+        function limpar_bios() {
+            bios = document.getElementsByClassName("bios");
+            if(bios.length > 0 ) {
+             my_bio = bios[0];
+             my_bio.parentElement.removeChild(my_bio);
+            }
+
+            videos = document.getElementsByClassName("videos");
+            if(videos.length > 0 ) {
+             my_video = videos[0];
+             my_video.parentElement.removeChild(my_video);
+            }
+        }
+
+        // BOTOES BIO 
+        
+        function abrirseguinte(){
+            limpar_bios();
+            document.body.appendChild(bio2);
+            reportWindowSize();         
+        }
+
+        function abrirseguinte2(){
+            limpar_bios();
+            document.body.appendChild(bio3);
+            reportWindowSize();   
+        }
+
+        function abrirseguinte3(){
+            limpar_bios();
+            document.body.appendChild(bio4);
+            reportWindowSize();   
+        }
+
+        function abrirseguinte4(){
+            limpar_bios();
+            document.body.appendChild(bio5);
+            reportWindowSize();   
+        }
+
+        function abriranterior2(){
+            limpar_bios();
+            document.body.appendChild(bio);
+            reportWindowSize();
+            document.getElementById("div-bio");
+        }
+
+        function abriranterior3(){
+            abrirseguinte();
+        }
+
+        function abriranterior4(){
+            abrirseguinte3();
+        }
+        
+        function abrirseguintevid2(){
+            abrirseguinte();
+        }
+
+        function abrirmenumenusobre() {
+            menu2.removeChild(creditos2);
+            menu2.appendChild(sobre2);
+            }
+
+        function abrirmenucreditos(){    
+            menu2.removeChild(sobre2);
+            menu2.appendChild(creditos2);
+        }
+
+    
+        // SOM
+    function som() {
+                click.play();
+            }
+
+
+
+        /* 0 - PÁGINA INTRO */
+
+        var paginaintro=document.createElement('DIV');
+        paginaintro.id="botaoinicial";
+        paginaintro.addEventListener('click', cancelabrirtrailertimeout);
+        paginaintro.addEventListener('click', som);
+        document.body.appendChild(paginaintro);
+
+        var videointro = document.getElementById("video-intro");
+        videointro.controls = false;
+        paginaintro.appendChild(videointro);
+        
+       
+
+
+        // TRAILER
+
+        var sidenavtrailer = document.createElement('DIV');
+        sidenavtrailer.id ="sidenav-trailer";
+
+        sidenavtrailer.appendChild(videotrailer);
+
+        sidenavtrailer.appendChild(imgcruz);
+        imgcruz.addEventListener('click', fechartrailer);
+        imgcruz.addEventListener('click', som);
+
+
+        // HOMEPAGE - BARRA
+
+        var paginainicial=document.createElement('DIV');
+        paginainicial.id="pagina-inicial";
+
+        var header=document.createElement('DIV');
+        header.id="barra-header";
+        paginainicial.appendChild(header);
+
+        var logo1= document.createElement('IMG');
+        logo1.id="logo-farol";
+        logo1.src = "img/logo.png";
+        header.appendChild(logo1);
+        logo1.addEventListener('click', abrirhomepage);
+        logo1.addEventListener('click', som);
+
+ // MENU 1
+
+ var menuprincipal= document.createElement('IMG');
+        menuprincipal.id="menubarras";
+        menuprincipal.src = "img/menuprincipal.png";
+        header.appendChild(menuprincipal);
+        menuprincipal.addEventListener('click', abrirmenu1);
+        menuprincipal.addEventListener('click', som);
+
+        var menu1=document.createElement('DIV');
+        menu1.id="menu-1";
+
+        var sobre=document.createElement('DIV');
+        sobre.id="menu-sobre";
+        sobre.innerHTML="<p>Sobre</p>";
+        menu1.appendChild(sobre);
+        sobre.addEventListener('click', abrirmenumenusobre);
+        
+        var creditos=document.createElement('DIV');
+        creditos.id="menu-creditos";
+        creditos.innerHTML="<p>Créditos</p>";
+        menu1.appendChild(creditos);
+        creditos.addEventListener('click', abrirmenucreditos);
+
+
+        // MENU 2
+
+        var menu2=document.createElement('DIV');
+        menu2.id="menu-2"; 
+        menu1.appendChild(menu2);
+
+        var sobre2=document.createElement('DIV');
+        sobre2.id="menu-sobre2";
+        sobre2.innerHTML="<p>    O projeto Farol surgiu no âmbito da unidade curricular Atelier de Multimédia. <br>O nome “Farol” é inspirado na música brasileira “Saudade” de autoria de Maria Bethânia com Lenine. Com o trabalho realizado, idealizamos apresentar uma perspetiva positiva de um sentimento, às vezes, tão amargo. <br><br><br><br>“Saudade igual a farol, engana o mar, imita o sol”</p>";
+        menu2.appendChild(sobre2);
+        
+        var creditos2=document.createElement('DIV');
+        creditos2.id="menu-creditos2";    
+        creditos2.innerHTML="Inês Maria dos Santos Sousa e Silva<br>Mara Benkert Patrício<br>Maria Luísa Cordeiro<br>Marta Maria de Deus Anselmo Stuart Ribeiro<br>Tayná Luyse Cordeiro da Silva<br><br><br> Orientação:<br> Professor Ivo Teixeira <br> Professor Ricardo Baptista <br> Professora Cristina Ferreira <br><br><br> Atelier Multimédia<br>2023</p>"; 
+        
+
+        // SLIDE
+
+        var fotosslide=document.createElement('DIV');
+        fotosslide.id="fotos-slide";
+        paginainicial.appendChild(fotosslide);
+
+        var containerslide=document.createElement('DIV');
+        containerslide.id="container-slide";
+        fotosslide.appendChild(containerslide);
+        containerslide.addEventListener('click', abrirbio)
+        containerslide.addEventListener('click', som);
+
+       /* var txtslide1=document.createElement('DIV');
+        txtslide1.id="txt-slide1";
+        txtslide1.innerHTML="<p>"Pessoa"<p>"
+        containerslide.appendChild(txtslide1); */
+        
+
+        var containerslide2=document.createElement('DIV');
+        containerslide2.id="container-slide2";
+        fotosslide.appendChild(containerslide2);
+        containerslide2.addEventListener('click', abrirbio2);
+        containerslide2.addEventListener('click', som);
+
+        var containerslide3=document.createElement('DIV');
+        containerslide3.id="container-slide3";
+        fotosslide.appendChild(containerslide3);
+        containerslide3.addEventListener('click', abrirbio3);
+        containerslide3.addEventListener('click', som);
+
+        var containerslide4=document.createElement('DIV');
+        containerslide4.id="container-slide4";
+        fotosslide.appendChild(containerslide4);
+        containerslide4.addEventListener('click', abrirbio4);
+        containerslide4.addEventListener('click', som);
+
+       
+        // RODAPÉ
+
+        var rodape= document.createElement('IMG');
+        rodape.id="logo-rodape";
+        rodape.src = "img/rodape.png";
+        paginainicial.appendChild(rodape);
+
+        
+        // BIO INDIVIDUAL 
+
+        var bio=document.createElement('DIV');
+        bio.id="div-bio";
+        bio.className="bios";
+        
+        window.addEventListener('resize', reportWindowSize);
+
+
+        // PESSOA
+
+        var imgpessoabio= document.createElement('IMG');
+        imgpessoabio.id="pessoabio";
+        imgpessoabio.src = "img/imgpessoa.png";
+        bio.appendChild(imgpessoabio);
+
+
+        // ICONS
+
+        var play= document.createElement('IMG');
+        play.id="play-icon";
+        play.src = "img/play.png";
+        bio.appendChild(play);
+        play.addEventListener('click', avancarvideo);
+        play.addEventListener('click', som);
+        play.addEventListener('mouseover', playhover);
+        play.addEventListener('mouseout', playout);
+
+        var home= document.createElement('IMG');
+        home.id="home-icon";
+        home.src = "img/x.png";
+        bio.appendChild(home);
+        home.addEventListener('click', abrirhome);
+        home.addEventListener('click', som); 
+        home.addEventListener('mouseover', xhover);
+        home.addEventListener('mouseout', xout);
+
+        var seguinte= document.createElement('IMG');
+        seguinte.id="seta-icon";
+        seguinte.src = "img/seta.png";
+        bio.appendChild(seguinte);
+        seguinte.addEventListener('click', abrirseguinte);
+        seguinte.addEventListener('click', som); 
+        seguinte.addEventListener('mouseover', setahover);
+        seguinte.addEventListener('mouseout', setaout);
+
+
+        // VIDEOS
+
+        var navvid=document.createElement('DIV');
+        navvid.id="nav-vid";
+        navvid.className="videos";
+
+
+        // VIDEO PESSOA
+
+        var divmoldura= document.createElement('DIV');
+        divmoldura.id="moldura";
+        navvid.appendChild(divmoldura);
+        
+        var vidpessoa = document.getElementById("vid-pessoa");
+        divmoldura.appendChild(vidpessoa);
+
+        var seguintevid2= document.createElement('IMG');
+        seguintevid2.id="seguinte-2";
+        seguintevid2.src = "img/seta.png";
+        navvid.appendChild(seguintevid2);
+        seguintevid2.addEventListener('click', abrirseguintevid2);
+        seguintevid2.addEventListener('click', som); 
+
+        var anterior2= document.createElement('IMG');
+        anterior2.id="anterior-2";
+        anterior2.src = "img/seta2.png";
+        navvid.appendChild(anterior2);
+        anterior2.addEventListener('click', abriranterior2);
+        anterior2.addEventListener('click', som);
+
+        // BIO INDIVIDUAL 2
+
+        var bio2=document.createElement('DIV');
+        bio2.id="div-bio2";
+        bio2.className="bios";
+
+
+        // LUGAR
+
+        var imglugar= document.createElement('IMG');
+        imglugar.id="img-lugar";
+        imglugar.src = "img/imglugar.png";
+        bio2.appendChild(imglugar);
+
+        // ICONS
+
+        var play2= document.createElement('IMG');
+        play2.id="play-icon2";
+        play2.src = "img/play.png";
+        bio2.appendChild(play2);
+        play2.addEventListener('click', avancarvideo2);
+        play2.addEventListener('click', som);
+        play2.addEventListener('mouseover', playhover);
+        play2.addEventListener('mouseout', playout);
+
+
+        var home2= document.createElement('IMG');
+        home2.id="home-icon2";
+        home2.src = "img/x.png";
+        bio2.appendChild(home2);
+        home2.addEventListener('click', abrirhome);
+        home2.addEventListener('click', som); 
+
+        var seguinte2= document.createElement('IMG');
+        seguinte2.id="seta-icon2";
+        seguinte2.src = "img/seta.png";
+        bio2.appendChild(seguinte2);
+        seguinte2.addEventListener('click', abrirseguinte2);
+        seguinte2.addEventListener('click', som); 
+
+
+
+        // VIDEOS
+
+        var navvid2=document.createElement('DIV');
+        navvid2.id="nav-vid2";
+        navvid2.className="videos";
+
+
+        // VIDEO LUGAR
+
+        var divmoldura2= document.createElement('DIV');
+        divmoldura2.id="moldura2";
+        navvid2.appendChild(divmoldura2);
+        
+        var vidlugar = document.getElementById("vid-lugar");
+        divmoldura2.appendChild(vidlugar);
+
+        var seguinte3= document.createElement('IMG');
+        seguinte3.id="seguinte-3";
+        seguinte3.src = "img/seta.png";
+        navvid2.appendChild(seguinte3);
+        seguinte3.addEventListener('click', abrirseguinte2);
+        seguinte3.addEventListener('click', som); 
+
+        var anterior3= document.createElement('IMG');
+        anterior3.id="anterior-3";
+        anterior3.src = "img/seta2.png";
+        navvid2.appendChild(anterior3);
+        anterior3.addEventListener('click', abriranterior3);
+        anterior3.addEventListener('click', som);
+
+
+        // BIO INDIVIDUAL 3
+
+        var bio3=document.createElement('DIV');
+        bio3.id="div-bio3";
+        bio3.className="bios";
+
+        // SENTIMENTO
+
+        var imgsentimento= document.createElement('IMG');
+        imgsentimento.id="img-sentimento";
+        imgsentimento.src = "img/imgsentimento.png";
+        bio3.appendChild(imgsentimento);
+
+
+        // ICONS
+
+        var play3= document.createElement('IMG');
+        play3.id="play-icon3";
+        play3.src = "img/play.png";
+        bio3.appendChild(play3);
+        play3.addEventListener('click', avancarvideo3);
+        play3.addEventListener('click', som);
+        play3.addEventListener('mouseover', playhover);
+        play3.addEventListener('mouseout', playout);
+
+
+        var home3= document.createElement('IMG');
+        home3.id="home-icon3";
+        home3.src = "img/x.png";
+        bio3.appendChild(home3);
+        home3.addEventListener('click', abrirhome);
+        home3.addEventListener('click', som); 
+
+        var seguinte4= document.createElement('IMG');
+        seguinte4.id="seta-icon3";
+        seguinte4.src = "img/seta.png";
+        bio3.appendChild(seguinte4);
+        seguinte4.addEventListener('click', abrirseguinte3);
+        seguinte4.addEventListener('click', som); 
+
+        // VIDEO SENTIMENTO
+
+        var navvid3=document.createElement('DIV');
+        navvid3.id="nav-vid3";
+        navvid3.className="videos";
+
+        var divmoldura3= document.createElement('DIV');
+        divmoldura3.id="moldura3";
+        navvid3.appendChild(divmoldura3);
+        
+        var vidsentimento = document.getElementById("vid-sentimento");
+        divmoldura3.appendChild(vidsentimento);
+
+        var seguinte5= document.createElement('IMG');
+        seguinte5.id="seguinte-5";
+        seguinte5.src = "img/seta.png";
+        navvid3.appendChild(seguinte5);
+        seguinte5.addEventListener('click', abrirseguinte3);
+        seguinte5.addEventListener('click', som); 
+
+        var anterior5= document.createElement('IMG');
+        anterior5.id="anterior-5";
+        anterior5.src = "img/seta2.png";
+        navvid3.appendChild(anterior5);
+        anterior5.addEventListener('click', abriranterior3);
+        anterior5.addEventListener('click', som);
+
+        // BIO INDIVIDUAL 4
+
+        var bio4=document.createElement('DIV');
+        bio4.id="div-bio4";
+        bio4.className="bios";
+
+        // TEMPO
+
+        var imgtempo= document.createElement('IMG');
+        imgtempo.id="img-tempo";
+        imgtempo.src = "img/imgtempo.png";
+        bio4.appendChild(imgtempo);
+
+        // ICONS
+
+
+        var play4= document.createElement('IMG');
+        play4.id="play-icon4";
+        play4.src = "img/play.png";
+        bio4.appendChild(play4);
+        play4.addEventListener('click', avancarvideo4);
+        play4.addEventListener('click', som);
+        play.addEventListener('mouseover', playhover);
+        play.addEventListener('mouseout', playout);
+
+        var home4= document.createElement('IMG');
+        home4.id="home-icon4";
+        home4.src = "img/x.png";
+        bio4.appendChild(home4);
+        home4.addEventListener('click', abrirhome);
+        home4.addEventListener('click', som); 
+
+
+        // VIDEO TEMPO
+
+
+        var navvid4=document.createElement('DIV');
+        navvid4.id="nav-vid4";
+        navvid4.className="videos";
+
+        var divmoldura4= document.createElement('DIV');
+        divmoldura4.id="moldura4";
+        navvid4.appendChild(divmoldura4);
+
+        var vidtempo = document.getElementById("vid-tempo");
+        divmoldura4.appendChild(vidtempo);
+
+        var anterior6= document.createElement('IMG');
+        anterior6.id="anterior-6";
+        anterior6.src = "img/seta2.png";
+        navvid4.appendChild(anterior6);
+        anterior6.addEventListener('click', abriranterior4);
+        anterior6.addEventListener('click', som);
+
+
+
+
+        </script>
+</body>
+</html>
+
+
+
+
